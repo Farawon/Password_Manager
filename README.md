@@ -403,7 +403,7 @@ Password_Manager/
 #### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Farawon/Password_Manager.git
+git clone https://github.com/theVarc/Password_Manager.git
 cd Password_Manager
 ```
 
