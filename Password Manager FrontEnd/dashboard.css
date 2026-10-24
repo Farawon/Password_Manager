@@ -1,0 +1,1514 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+}
+header{
+    background-color: #141432;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(30, 30, 90);
+}
+.inputBox{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 15px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.logo .fa-lock{
+    color: white;
+    background-color: rgb(79, 70, 229);
+    padding: 0.6rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.logo h3{
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.logoTextOff{
+    display: none;
+}
+
+.inputBox .fa-chevron-left{
+    color: rgb(125, 125, 161);
+    font-size: 0.7rem;
+    padding: 10px;
+    display: block;
+}
+.inputBox .fa-chevron-right{
+    color: rgb(125, 125, 161);
+    font-size: 0.7rem;
+    padding: 10px;
+    display: none;
+}
+.inputBox .fa-chevron-right:hover{
+    background-color: rgb(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: rgb(217, 217, 231);
+    
+}
+.inputBox .fa-chevron-left:hover{
+    background-color: rgb(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: rgb(217, 217, 231);
+    
+}
+.inputSearch input{
+    background-color: rgb(10, 10, 26);
+    padding: 0.6rem 15rem;
+    padding-left: 2.0rem;
+    border-radius: 10px;
+    border: 1px solid rgb(30, 30, 90);
+}
+.headerButtons{
+    display: flex;
+    gap: 10px;
+    margin-right: 15px;
+}
+.headerButtons button{
+    padding: 10px 20px;
+    gap: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.fa-plus  {
+   margin-right: 7px;
+}
+.fa-arrows-rotate{
+margin-right: 7px;
+
+}
+.btnSync{
+   background-color: rgb(20, 20, 50);
+   color: rgb(162, 162, 181);
+   border: 1px solid rgb(30, 30, 90);
+}
+.btnAdd{
+   background-color: rgb(67, 56, 202) ;
+   color: white;
+   border: none;
+}
+
+.mainSection{
+    flex-direction: row;
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    display: flex;
+}
+.mainSection h3{
+    padding-right: 67px;
+}
+.mainAside{
+    background-color: rgb(20, 20, 50);
+    flex: 0 0 280px;
+    width: 280px;
+    max-width: none;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    transition: transform 0.28s ease, flex-basis 0.25s ease;
+}
+.asideClosed{
+    flex: 0 0 5%;
+    max-width: 5%;
+    width: 5%;
+}
+.mainWhenAsideClosed{
+    flex: 0 0 95%;
+}
+.vaultSecured{
+    display: flex;
+    background-color: rgb(20, 37, 58);
+    padding: 10px 13px;
+    padding-right: 40px;
+    border: 1px solid rgb(19, 66, 72);
+    border-radius: 12px;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    max-width: 90%;
+}
+.vaultSecuredOff{
+    background-color: none;
+    border: none;
+    padding: 0;
+    width: 0;
+}
+.vaultPassiveGreen{
+    color: rgb(16, 185, 120);
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline;
+    padding: 0px;
+}
+.dott{
+    background-color: rgb(16, 179, 126);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+.vaultText{
+    color: rgb(139, 139, 148);
+    font-size: 15px;
+    margin-right: 80%;
+    padding-top: 20px;
+    display: block;
+}
+.selectionGroup{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    max-height: 55%;
+    width: 100%;
+}
+.selectType{
+    list-style: none;
+    color: rgb(125, 125, 161);
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 20px;
+}
+.selectTypeActive{
+    background-color: rgb(29, 27, 77);
+    border: 1px solid rgb(42, 38, 114) ;
+    color: rgb(141, 157, 221);
+}
+.seclectType:hover{
+    display: inline-block;
+}
+.selectType i{
+    width: 25px;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+.textDescription{
+    display:block
+}
+.selectionGroup li{
+    padding: 14px;
+    border-radius: 12px;
+    display: flex;
+}
+.containerTasks{
+    margin-top: 20px;
+    width: 98%;
+    overflow-x: auto;
+}
+.passwordTable{
+    width: 100%;
+    min-width: 800px;
+    background-color: #141432;
+    border: 1px solid rgb(30, 30, 90);
+    border-radius: 20px;
+}
+.passwordHeader{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 13% 12%;
+    align-items: center;
+    padding: 18px 25px;
+    background-color: #101027;
+    border-bottom: 1px solid rgb(30, 30, 90);
+    color: rgb(139, 139, 176);
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 20px 20px 0 0;
+}
+.passwordRow{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 13% 12% 2%;
+    align-items: center;
+    padding: 18px 25px;
+    color: white;
+    border-bottom: 1px solid rgb(30, 30, 90);
+}
+.strengthContainer{
+    display: flex;
+    gap: 20px;
+    transform: translateX(-65px);
+}
+.iconCopyEye{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.iconCopyEye i{
+    color: rgb(78, 78, 112);
+    visibility: hidden;
+}
+.fa-ellipsis{
+    color:rgb(78, 78, 112);
+    visibility: hidden;
+    font-size: 19px;
+    
+    border-radius: 50%;
+}
+.passwordCopy{
+    color: rgb(132, 164, 196);
+}
+.passwordRow:hover{
+    background-color: rgb(25, 25, 54);
+    .passwordCopy{
+        background-color: rgb(25, 25, 54);
+    }
+    .iconCopyEye i{
+        visibility: visible;
+    }
+    .fa-ellipsis{
+        visibility: visible;
+    }
+    .fa-ellipsis:hover{
+        background-color: rgb(0,0,0,0.3);
+    }
+}
+.siteIcon{
+    background-color: rgb(36, 41, 46);
+    max-width: 15%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.nameAndCategory{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.nameAndCategory p{
+    color: white;
+    font-weight: 500;
+}
+.nameAndCategory span{
+    color: rgb(139, 139, 176);
+    font-size: 13px;
+}
+.userEmail{
+    font-size: 14px;
+    color: rgb(190, 179, 196);
+}
+.siteInfo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.passwordCopy{
+    width: 30%;
+    border: none;
+    background-color: rgb(20, 20, 50);
+}
+.strength{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.strengthBars{
+    display: flex;
+    gap: 3px;
+}
+.strengthBars span{
+    background-color: rgb(30, 30, 90);
+    height: 6px;
+    width: 25px;
+    border-radius: 5px;
+}
+.passStrength{
+    color: rgb(190, 179, 196);
+    font-size: 14px;
+}
+.dayAmount{
+    color: rgb(190, 179, 196);
+    font-size: 14px;
+}
+.inputSearch{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.inputSearch i{
+    position: absolute;
+    left: 10px;
+    color: rgb(170, 163, 152);
+}
+
+
+
+
+main{
+    background-color: rgb(10, 10, 26);
+    flex: 1; 
+    min-width: 0;
+}
+.analytikMetrics{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 2%;
+    padding-top: 20px;
+}
+.analytikMetricsType{
+    width: 30%;
+    padding: 20px 0;
+    background-color: rgb(20, 20, 50);
+    border-radius: 15px;
+    border: 1px solid rgb(30, 30, 90);
+    display: flex;
+    gap: 15px;
+}
+
+.analytikMetricsType:hover{
+    transform: translateY(-5px);
+}
+.passwordRow {
+    position: relative;
+}
+
+.modalEditTool {
+    display: none;
+    position: absolute;
+    right: 25px;
+    top: 60%;
+    width: 195px;
+    z-index: 10;
+}
+.bkgModalRow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    z-index: 9;
+}
+.tools {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(20, 20, 50);
+    border: 1px solid rgb(30, 30, 90);
+    padding: 6px 0;
+    gap: 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.toolType, .toolTypeDelete {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px 15px;
+    margin: 0;
+    cursor: pointer;
+    font-size: 14px;
+}
+.toolTypeDelete:hover{
+    background-color: rgb(37, 23, 51);
+}
+.toolType {
+    color: rgb(192, 192, 220);
+}
+
+.toolTypeDelete {
+    color: rgb(214, 63, 66);
+}
+
+.toolType:hover {
+    background-color: rgb(32, 32, 60);
+}
+
+.divider {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(30, 30, 90);
+    margin: 5px 0;
+}
+.tools .fa-pen, .fa-arrow-up-right-from-square{
+    color: white;
+}
+.headerButtons .btnSync:hover{
+    border-color:rgb(27, 20, 145);
+    color:rgb(255, 255, 255)
+}
+.headerButtons .btnAdd:hover{
+    background-color: rgb(51, 43, 160);
+}
+
+.analytikMetricsType i{
+    padding: 15px;
+    border-radius: 12px;
+    margin-left: 18px;
+}
+.analytikMetricsType .fa-key{
+    color:rgb(79, 70, 229) ;
+    background-color: rgb(28, 27, 72);
+}
+.analytikMetricsType .fa-shield{
+    color:rgb(16, 185, 129);
+    background-color: rgb(20, 40, 60);
+}
+.analytikMetricsType .fa-triangle-exclamation{
+    color:rgb(223, 144, 15) ;
+    background-color: rgb(48, 37, 45);
+}
+.analytikMetricsType .fa-arrow-trend-up{
+    color:rgb(75, 66, 215) ;
+    background-color: rgb(28, 27, 72);
+}
+.numericAnalytik{
+    display: flex;
+    flex-direction: column;
+}
+.numericAnalytik p{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.numericAnalytik span{
+    color: rgb(139, 139, 176);
+    font-size: 0.9rem;
+}
+.passwordListSection{
+    margin-left: 2%;
+    padding-top: 20px;
+}
+.passwordListSection h2{
+    color: white;
+    font-size: 20px;
+    padding-top: 10px;
+}
+.amountPasswords{
+    color: rgb(139, 139, 161);
+}
+.selectType:hover{
+    background-color:rgba(255,255,255,0.05);
+}
+.profileSettings li{
+    display: flex;
+    padding: 15px;
+    border-radius: 12px;
+}
+.selectType1:hover{
+    background-color:rgba(255,255,255,0.05);
+
+}
+.signOut:hover{
+    background-color: rgb(38, 24, 51);
+    color: rgb(239, 55, 57);
+}
+
+.selection .selectType{
+    color: rgb(245, 158, 21);
+    padding-top:10px;   
+    font-size: 18px;
+    margin-left: 10px;
+    padding-top: 15px;
+}
+
+.selection .selectType:hover{
+    background-color:rgb(38, 31, 47);
+}
+
+.asideDown{
+    width: 100%;
+    margin-top: 16.5px;
+}
+
+.profileSettings{
+    border-top: 2px solid rgb(30, 30, 90);
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.profileSettings .selectTypeDown{
+    padding-top: 1px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    border-radius: 12px;
+    margin-left: 30px;
+}
+.profileSettingsOff{
+    margin-top: 90px;
+}
+.selectTypeDown p{
+    margin-left: 10px;
+}
+.profileCard{
+    display: flex;
+    align-items: center;
+    gap:12px;
+    border: 2px solid rgb(30, 30, 90);
+    border-radius: 12px;
+    padding: 8px 10px;
+    background-color: rgb(28, 28, 57);
+    color:rgb(255, 255, 255);
+    margin-top: 5px;
+    width: 230px;
+    margin-left: 15px;
+}
+.profileCardOff{
+    display: none;
+}
+.profileInfo p{
+    font-weight: 700;
+    font-size: 12px;
+}
+.profileInfo span{
+    font-weight: 100;
+    font-size: 10px;
+}
+.modalBackground{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    backdrop-filter: blur(2px);
+}
+.modalWindow{
+    position: fixed;
+    background-color: rgb(20, 20, 50);
+    width: 450px;
+    max-height: 700px;
+    padding: 10px 0 20px 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 2;
+    border-radius: 20px;
+}
+.modalInformation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.addCredential{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12.5vw;
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(30, 30, 90);
+}
+.addCredential h3{
+    color: white;
+}
+.fa-xmark{
+    color: rgb(139, 139, 176);
+    padding: 6px;
+    border-radius: 15px;
+}
+.fa-xmark:hover{
+    background: #393952;
+    transform: scale(1.05);
+}
+.inputGroup{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-left: 20px;
+}
+.inputGroup p{
+    color: rgb(139, 139, 176);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.inputGroup input{
+    background-color: rgb(10, 10, 26);
+    border: 1px solid rgb(30, 30, 90) ;
+    max-width: 95%;
+    padding: 8px 10px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+.passwordGenerate{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.generator{
+    background-color: rgb(10, 10, 26);
+    width: 91%;
+    padding: 10px 8px 15px 8px;
+    margin-left: 20px;
+    border: 1px solid rgb(30, 30, 90) ;
+    border-radius: 10px;
+}
+.quantityChars{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.quantityChars p{
+    color: rgb(139, 139, 176);
+    font-size: 0.8rem;
+}
+.quantityChars span{
+    color: rgb(165, 180, 252);
+    font-size: 0.8rem;
+}
+.generator input{
+    width: 100%;
+}
+.btnGenerate{
+    background-color: rgb(24, 22, 67);
+    width: 100%;
+    border: 1px solid rgb(41, 37, 115);
+    color: white;
+    padding: 10px 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btnGenerate:hover{
+    background-color: rgb(35, 31, 97);
+}
+.category{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    gap: 5px;
+}
+#lengthSlider{
+    cursor: pointer;
+}
+#categorySelect{
+    cursor: pointer;
+}
+.category p{
+    color:rgb(139, 139, 176);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.category select{
+    background-color: rgb(10, 10, 26);
+    border: 1px solid rgb(30, 30, 90) ;
+    max-width: 95%;
+    padding: 8px 7px;
+    border-radius: 6px;
+    color: white;
+}
+.notes{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 20px;
+}
+.notes p{
+    color:rgb(139, 139, 176);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.notes input{
+    background-color: rgb(10, 10, 26);
+    border: 1px solid rgb(30, 30, 90) ;
+    max-width: 95%;
+    padding: 20px 10px;
+    border-radius: 6px;
+}
+.AddVault{
+    display: flex;
+    gap: 6px;
+    justify-content: right;
+    max-width: 95%;
+}
+.cancelBtn{
+    background-color: rgb(20, 20, 50);
+    border: 1px solid rgb(30, 30, 90);
+    padding: 8px 13px;
+    color: rgb(139, 139, 176);
+    border-radius: 6px;
+}
+.cancelBtn:hover{
+    border: 1px solid rgb(79, 70, 229);
+    color: white;
+}
+.BtnaddVault{
+    background-color: rgb(79, 70, 229);
+    border-radius: 6px;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    box-shadow: 0 0 10px 2px rgb(79, 70, 229);
+}
+.BtnaddVault:hover{
+    background-color: rgb(67, 56, 202);
+}
+.settingsBkg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    backdrop-filter: blur(2.5px);
+}
+.settingsModalToggle{
+    display: block;
+}
+.modalSettings{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 840px;
+    height: 758px;
+    max-width: 95vw;
+    max-height: 90vh;
+    display: none;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    background-color: #141432;
+    border: 1px solid rgb(30, 30, 90);
+    border-radius: 16px;
+    z-index: 2;
+    color: white;
+}
+.settingsBody {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.settingsAside {
+    flex: 0 0 240px;
+    background-color: #101027;
+    border-right: 1px solid rgb(30, 30, 90);
+    padding: 22px 20px;
+}
+.settingsAside h3 {
+    color: rgb(139, 139, 176);
+    font-size: 16px;
+    margin: 0 15px 32px;
+}
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.navBtn {
+    padding: 15px;
+    border: none;
+    border-radius: 14px;
+    background: none;
+    color: rgb(162, 162, 190);
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+}
+.navBtn.active {
+    background-color: rgb(79, 70, 229);
+    color: white;
+}
+.navBtn:hover {
+    background-color: rgba(79, 70, 229, 0.5);
+    color: white;
+}
+.mainInformation {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 42px 40px 0;
+}
+.settingsCloseIcon {
+    position: absolute;
+    top: 23px;
+    right: 24px;
+    color: rgb(170, 170, 190);
+    font-size: 20px;
+    cursor: pointer;
+}
+.modalContent h2 {
+    font-size: 25px;
+    margin: 0 0 8px;
+}
+.modalMainText {
+    color: rgb(139, 139, 176);
+    font-size: 16px;
+    margin-bottom: 34px;
+}
+.settingsField {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.settingsField p {
+    color: rgb(139, 139, 176);
+    font-size: 14px;
+    font-weight: 600;
+}
+.settingsField input {
+    width: 100%;
+    padding: 17px 15px;
+    border: 1px solid rgb(30, 30, 90);
+    border-radius: 13px;
+    background-color: #101027;
+    color: white;
+    font-size: 16px;
+}
+.modalSubtitleText{
+    color: rgb(107, 107, 143);
+    font-weight: 600;
+}
+.planSection{
+    display: flex;
+    gap: 20px;
+    padding-top: 10px;
+}
+.plan{
+    height: 100px;
+    background-color: rgb(15, 15, 45);
+    border: 1px solid rgb(30, 30, 90);
+    width: 50%;
+    border: none;
+}
+.pricePlan{
+    padding-top: 20px;
+    color: rgb(79, 70, 229);
+    font-weight: 600;
+    font-size: 20px;
+}
+.boxPlan{
+    font-weight: 700;
+}
+.searchInputHeader{
+    color: white;
+}
+.secondsubtitleText{
+    color: rgb(106, 106, 142);
+    font-weight: 500;
+    font-size: 13px;
+}
+.plan:has(input[type="radio"]:checked) {
+    background-color: rgb(26, 25, 68);
+    border-color: rgb(79, 70, 229);
+    transition: 0.3s;
+}
+.plan,
+        .card {
+            border: 1px solid rgb(30, 30, 90);
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .card {
+            cursor: pointer;
+        }
+        .card.selected {
+            border: 2px solid rgb(30, 30, 90);
+        }
+        #new-card {
+            margin-top: 20px;
+        }
+        #card-element {
+            border: 1px solid #ccc;
+            padding: 12px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        button {
+            padding: 12px 20px;
+            cursor: pointer;
+        }
+        #error {
+            color: red;
+            margin-top: 15px;
+        }
+        #success {
+            color: green;
+            margin-top: 15px;
+        }
+.cardCommon{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.cardCommonInfo{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-color: 1px solid rgb(30, 30, 90);
+}
+.cardModal{
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgb(38, 37, 78);
+}
+.expiresDate{
+    color: grey;
+}
+.btnCards{
+    padding-top: 10px; 
+    display: flex;
+    flex-direction: column;
+}
+#add-card-button{
+    width: 100%;
+    background: none;
+    border: 1px dashed rgb(30, 30, 90);
+    color: rgb(107, 107, 143);
+    padding: 15px 0;
+    border-radius: 10px;
+}
+#pay-button{
+    width: 100%;
+    background: none;
+    border: 1px dashed rgb(30, 30, 90);
+    color: rgb(107, 107, 143);
+    padding: 15px 0;
+    border-radius: 10px;
+}
+#pay-button:hover{
+    background-color:rgb(67, 56, 202);
+    color: white;
+}
+#add-card-button:hover{
+    background-color: rgb(16, 183, 127);
+    color: white;
+}
+.profileSection{
+    display: block;
+}
+.paymentMethod{
+    font-size: 21px ;
+    padding-bottom: 7px;
+}
+.billingSection{
+    display: none;
+}
+.settingsDown {
+    margin-top: auto;
+    margin-left: -40px;
+    margin-right: -40px;
+    border-top: 1px solid rgb(30, 30, 90);
+    padding: 30px;
+}
+.settingsFooter {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 25px;
+}
+.settingsCloseBtn{
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.settingsCloseBtn:hover{
+    background-color: rgb(27, 27, 56);
+    color: white;
+}
+.settingsApply {
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.settingsCloseBtn {
+    background: none;
+    border: none;
+    color: rgb(162, 162, 190);
+}
+.settingsApply {
+    background-color: rgb(79, 70, 229);
+    border: none;
+    color: white;
+    min-width: 195px;
+}
+.settingsApply:hover {
+    background-color: rgb(67, 56, 202);
+}
+
+.strengthInfo{
+    display: none;
+}
+.bars{
+    display: flex;
+    gap: 8px;
+}
+.bars span{
+    height: 8px;
+    background-color: rgb(30, 30, 90);
+    width: 126px;
+    border-radius: 10px;
+}
+.chars{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    padding-top: 10px;
+}
+.chars span{
+    color: rgb(139, 139, 164);
+    font-size: 13px;
+    display: block;
+}
+.inputPassword {
+    position: relative;
+}
+.icons {
+    position: absolute;
+    right: 35px;
+    top: 33px;
+    display: flex;
+    gap: 10px;
+}
+.eye {
+    color: rgb(139, 139, 176);
+    cursor: pointer;
+    display: block;
+}
+.fa-eye-slash {
+    display: none;
+}
+.fa-copy{
+    color:rgb(139, 139, 176) ;
+    cursor: pointer;
+}
+.menuToggle,
+.asideOverlay{
+    display: none;
+}
+
+@media screen and (max-width: 1024px){
+    .inputSearch input{
+        width: min(38vw, 440px);
+        padding: 0.6rem 12px 0.6rem 2rem;
+    }
+    .analytikMetrics{
+        flex-wrap: wrap;
+        margin-right: 2%;
+    }
+    .analytikMetricsType{
+        flex: 1 1 calc(50% - 20px);
+        width: auto;
+    }
+    .strengthContainer{
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 760px){
+    header{
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        height: 64px;
+        gap: 10px;
+        padding: 0 12px;
+    }
+    .inputBox{
+        flex: 1;
+        min-width: 0;
+        gap: 10px;
+        margin-left: 0;
+    }
+    .menuToggle{
+        display: inline-flex;
+        flex: 0 0 40px;
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgb(30, 30, 90);
+        border-radius: 10px;
+        background: transparent;
+        color: white;
+        font-size: 17px;
+        padding: 0;
+    }
+    .inputBox .fa-chevron-left,
+    .inputBox .fa-chevron-right{
+        display: none !important;
+    }
+    .logo{
+        gap: 7px;
+        flex: 0 0 auto;
+    }
+    .logo .fa-lock{
+        padding: 9px;
+    }
+    .logo h3{
+        font-size: 14px;
+    }
+    .inputSearch{
+        flex: 1;
+        min-width: 0;
+    }
+    .inputSearch input{
+        width: 100%;
+        min-width: 0;
+        padding: 10px 8px 10px 30px;
+        font-size: 13px;
+    }
+    .headerButtons{
+        gap: 6px;
+        margin-right: 0;
+    }
+    .headerButtons button{
+        padding: 10px;
+        white-space: nowrap;
+        font-size: 12px;
+    }
+    .btnSync{
+        width: 40px;
+        height: 40px;
+        padding: 0 !important;
+        font-size: 0 !important;
+    }
+    .btnSync i{
+        margin: 0;
+        font-size: 14px;
+    }
+    .btnAdd{
+        height: 40px;
+    }
+    .mainSection{
+        min-height: calc(100vh - 64px);
+        min-height: calc(100dvh - 64px);
+    }
+    .mainAside{
+        position: fixed;
+        z-index: 8;
+        top: 64px;
+        bottom: 0;
+        left: 0;
+        width: min(280px, 82vw);
+        max-width: 82vw;
+        min-width: 0;
+        flex: none;
+        overflow-y: auto;
+        transform: translateX(-100%);
+        box-shadow: 12px 0 30px rgba(0, 0, 0, 0.35);
+    }
+    .mainAside.mobileOpen{
+        transform: translateX(0);
+    }
+    .mainAside.asideClosed{
+        width: min(280px, 82vw);
+        max-width: 82vw;
+    }
+    .asideOverlay{
+        position: fixed;
+        z-index: 7;
+        inset: 64px 0 0;
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        background: rgba(4, 4, 18, 0.68);
+        transition: opacity 0.28s ease, visibility 0.28s ease;
+    }
+    .asideOverlay.isVisible{
+        visibility: visible;
+        opacity: 1;
+    }
+    body.menuOpen{
+        overflow: hidden;
+    }
+    main,
+    main.mainWhenAsideClosed{
+        flex: 1 1 auto;
+        width: 100%;
+        min-width: 0;
+    }
+    .analytikMetrics{
+        gap: 10px;
+        margin: 0;
+        padding: 16px 14px 0;
+    }
+    .analytikMetricsType{
+        flex: 1 1 calc(50% - 5px);
+        min-width: 0;
+        gap: 9px;
+        padding: 14px 8px;
+        border-radius: 12px;
+    }
+    .analytikMetricsType i{
+        flex: 0 0 auto;
+        margin-left: 0;
+        padding: 11px;
+    }
+    .numericAnalytik p{
+        font-size: 19px;
+    }
+    .numericAnalytik span{
+        font-size: 11px;
+        line-height: 1.35;
+    }
+    .passwordListSection{
+        margin: 0;
+        padding: 20px 14px 24px;
+    }
+    .passwordListSection h2{
+        font-size: 19px;
+    }
+    .containerTasks{
+        width: 100%;
+        margin-top: 14px;
+        border-radius: 14px;
+        -webkit-overflow-scrolling: touch;
+    }
+    .passwordTable{
+        min-width: 760px;
+        border-radius: 14px;
+    }
+    .passwordHeader,
+    .passwordRow{
+        padding: 14px 16px;
+    }
+    .passwordHeader{
+        font-size: 12px;
+    }
+    .passwordRow{
+        min-height: 76px;
+    }
+    .modalWindow{
+        width: min(450px, calc(100vw - 24px));
+        max-height: 90dvh;
+        overflow-y: auto;
+    }
+    .modalSettings{
+        width: calc(100vw - 24px);
+        height: 90dvh;
+        max-width: none;
+        max-height: none;
+        overflow-y: auto;
+    }
+    .settingsBody{
+        min-height: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+    .settingsAside{
+        flex: 0 0 auto;
+        padding: 14px 16px;
+        border-right: 0;
+        border-bottom: 1px solid rgb(30, 30, 90);
+    }
+    .settingsAside h3{
+        margin: 0 0 10px;
+    }
+    .navigation{
+        flex-direction: row;
+    }
+    .navBtn{
+        flex: 1;
+        padding: 10px;
+        text-align: center;
+    }
+    .mainInformation{
+        min-height: 0;
+        padding: 28px 20px 0;
+    }
+    .settingsDown{
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 18px 14px;
+    }
+    .settingsFooter{
+        gap: 8px;
+    }
+    .settingsCloseBtn,
+    .settingsApply{
+        padding: 12px;
+        font-size: 14px;
+    }
+    .settingsApply{
+        min-width: 0;
+    }
+}
+
+@media screen and (max-width: 480px){
+    header{
+        padding: 0 8px;
+        gap: 6px;
+    }
+    .inputBox{
+        gap: 7px;
+    }
+    .logo h3{
+        display: none;
+    }
+    .inputSearch input{
+        font-size: 12px;
+    }
+    .headerButtons{
+        gap: 5px;
+    }
+    .btnAdd{
+        padding: 9px 10px !important;
+        font-size: 11px !important;
+    }
+    .analytikMetricsType{
+        padding: 12px 7px;
+    }
+    .analytikMetricsType i{
+        padding: 9px;
+    }
+    .numericAnalytik p{
+        font-size: 17px;
+    }
+    .numericAnalytik span{
+        font-size: 10px;
+    }
+    .planSection{
+        gap: 8px;
+    }
+    .plan{
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .btnAdd{
+        width: 40px;
+        padding: 0 !important;
+        font-size: 0 !important;
+    }
+    .btnAdd i{
+        margin: 0;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1140px){
+    .passwordTable{
+        min-width: 0;
+        width: 100%;
+    }
+    .passwordHeader{
+        display: none;
+    }
+    .passwordRow{
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-areas:
+            "site more"
+            "email email"
+            "password strength"
+            "updated updated";
+        gap: 12px 14px;
+        min-height: 0;
+        padding: 14px;
+    }
+    .siteInfo{
+        grid-area: site;
+        min-width: 0;
+    }
+    .siteIcon{
+        display: flex;
+        flex: 0 0 36px;
+        width: 36px;
+        height: 36px;
+        max-width: none;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    .nameAndCategory{
+        min-width: 0;
+    }
+    .nameAndCategory p{
+        overflow-wrap: anywhere;
+    }
+    .userEmail{
+        grid-area: email;
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+    .userEmail::before,
+    .mobileFieldLabel,
+    .strength::before,
+    .dayAmount::before{
+        display: block;
+        margin-bottom: 4px;
+        color: rgb(139, 139, 176);
+        font-size: 10px;
+        font-weight: 600;
+    }
+    .userEmail::before{
+        content: "EMAIL";
+    }
+    .credentialPassword{
+        grid-area: password;
+        min-width: 0;
+    }
+    .mobileFieldLabel{
+        display: block;
+    }
+    .passwordCopy{
+        width: 100%;
+        max-width: 100%;
+        text-align: left;
+    }
+    .strengthContainer{
+        grid-area: strength;
+        min-width: 0;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 7px;
+        transform: none;
+    }
+    .iconCopyEye{
+        gap: 6px;
+    }
+    .iconCopyEye i{
+        visibility: visible;
+        font-size: 12px;
+    }
+    .strength{
+        gap: 4px;
+        margin-bottom: 0;
+    }
+    .strength::before{
+        content: "STRENGTH";
+    }
+    .strengthBars{
+        gap: 2px;
+    }
+    .strengthBars span{
+        width: 12px;
+        height: 5px;
+    }
+    .passStrength{
+        font-size: 10px;
+    }
+    .dayAmount{
+        grid-area: updated;
+    }
+    .dayAmount::before{
+        content: "UPDATED";
+    }
+    .passwordRow > .fa-ellipsis{
+        grid-area: more;
+        justify-self: end;
+        align-self: center;
+        visibility: visible;
+    }
+}

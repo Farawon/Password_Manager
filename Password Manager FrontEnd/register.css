@@ -1,0 +1,365 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,
+body{
+    min-height: 100%;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(10, 10, 26);
+    overflow-y: hidden;
+}
+.mainBoard{
+    display: flex;
+    min-height: 100%;
+    width: 100%;
+}
+.journeyBegin{
+    background-color: rgb(20, 20, 50);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    overflow: hidden;
+}
+.journeyBegin .fa-shield{
+    color: rgb(16, 185, 129);
+    background-color: rgb(20, 47, 65);
+    padding: 25px;
+    font-size: 2.5rem;
+    border-radius: 25px;
+    border: 1px solid rgb(19, 91, 86);
+}
+h1{
+    color: white;
+    font-size: 2.3rem;
+    max-width: 60%;
+    font-weight: 700;
+}
+.journeyBegin > p{
+    color: rgb(109, 139, 176);
+    font-size: 1.2rem;
+    max-width: 60%;
+    padding-top: 10px;
+}
+.bgGlow{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(
+        circle,
+        rgba(103, 74, 255, .35) 0%,
+        rgba(103, 74, 255, .18) 35%,
+        transparent 90%
+    );
+    filter: blur(70px);
+    z-index: 0;
+    pointer-events: none;
+}
+.benefit{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 30px;
+    width: 60%;
+}
+.benefit li{
+    list-style: none;
+    color: rgb(196, 196, 224);
+    display: flex;
+    gap: 15px;
+}
+.benefit .numerical{
+    padding: 10px 10px;
+    background-color: rgb(34, 36, 92);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    color: rgb(165, 180, 252);
+    font-weight: 00;
+}
+.textBox{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.textBox p{
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.textBox span{
+    color: rgb(116, 96, 121);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.registerInput{
+    background-color: rgb(10, 10, 26);
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.elementsBox{
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 55px clamp(24px, 5vw, 80px);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.logo .fa-lock{
+    color: white;
+    background-color: rgb(79, 70, 229);
+    padding: 0.7rem;
+    border-radius: 10px;
+}
+.logo h3{
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+}
+.mainText{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.mainText h2{
+    color: white;
+    font-size: 2rem;
+}
+.mainText p{
+    color: rgb(131, 139, 167);
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+.inputs input{
+    min-width: 0;
+    padding: 15px 20px;
+    background-color: rgb(20, 20, 50);
+    border: 1px solid rgb(30, 30, 90);
+    border-radius: 13px;
+    color: rgb(156, 163, 175);
+    font-size: 16px;
+}
+.inputs p{
+    color: rgb(196, 196, 224);
+}
+.nameInput{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.emailInput{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.masterPassword{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+.passwordCheck{
+    display: none;
+}
+.strengthBar{
+    display: flex;
+    gap: 8px;
+}
+.strengthBar span{
+    height: 8px;
+    background-color: rgb(30, 30, 90);
+    flex: 1;
+    border-radius: 10px;
+}
+.passwordInfo{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.passwordInfo span{
+    color: rgb(196, 196, 224);
+    font-size: 0.7rem;
+}
+.reqirements{
+    flex-wrap: wrap;
+    display: flex;
+    padding: 10px 0 0 15px;
+}
+.reqirements li{
+    flex: 0 0 40%;
+    color: rgb(30, 30, 90);
+    font-size: 0.7rem;
+}
+.fa-regular{
+    color: rgb(139, 139, 176);
+    position: absolute;
+    right: 20px;
+    top: 45px;
+    visibility: visible;
+}
+.fa-regular:hover{
+    cursor: pointer;
+}
+.fa-eye-slash{
+    visibility: hidden;
+}
+.transferBox{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.rememberMe{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.rememberMe input{
+    width: 30px;
+    height: 30px;
+}
+.rememberMe p{
+    color: rgb(139, 139, 176);
+    font-size: 0.8rem;
+}
+.rememberMe span a{
+    color: rgb(32, 49, 229);
+    font-size: 0.8rem;
+}
+.transferDashBoard:hover{
+    cursor: pointer;
+}
+.transferDashBoard button{
+    text-decoration: none;
+    width: 100%;
+    background-color: rgb(67, 56, 202);
+    padding: 12px 0;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    border: none;
+}
+
+.transferRegister{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+.transferRegister p{
+    color: rgb(139, 139, 143);
+}
+.transferRegister a{
+    color:rgb(61, 60, 203) ;
+    text-decoration: none;
+}
+
+/* Планшеты */
+@media screen and (max-width: 1024px) {
+    .journeyBegin {
+        flex: 0.8;
+    }
+
+    .registerInput {
+        flex: 1.2;
+    }
+
+    .elementsBox {
+        padding: 40px 30px;
+    }
+
+    h1 {
+        max-width: 85%;
+        font-size: 1.8rem;
+    }
+
+    .journeyBegin > p,
+    .benefit {
+        max-width: 85%;
+        width: 85%;
+    }
+}
+
+/* Телефоны */
+@media screen and (max-width: 768px) {
+    .journeyBegin {
+        display: none;
+    }
+
+    .registerInput {
+        flex: 1;
+        width: 100%;
+    }
+
+    .elementsBox {
+        max-width: 560px;
+        padding: 30px 24px;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+}
+
+/* Маленькие телефоны */
+@media screen and (max-width: 426px) {
+    .elementsBox {
+        padding: 24px 18px;
+        gap: 24px;
+    }
+
+    .mainText h2 {
+        font-size: 1.7rem;
+    }
+
+    .inputs input {
+        font-size: 14px;
+    }
+
+    .rememberMe {
+        align-items: flex-start;
+    }
+
+    .rememberMe input {
+        flex-shrink: 0;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 322px) {
+    .elementsBox {
+        padding: 20px 12px;
+    }
+
+    .mainText h2 {
+        font-size: 1.5rem;
+    }
+
+    .transferRegister p,
+    .transferRegister a {
+        font-size: 0.8rem;
+    }
+}

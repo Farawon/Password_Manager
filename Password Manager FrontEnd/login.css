@@ -1,0 +1,253 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+}
+.mainBoard{
+    display: flex;
+    min-height: 100vh;
+}
+.welcomeBack{
+    background-color: rgb(20, 20, 50);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 50%;
+    position: relative;
+}
+.welcomeBack .fa-shield{
+    color: rgb(79, 70, 229);
+    background-color: rgb(38, 37, 104);
+    padding: 25px;
+    font-size: 2.5rem;
+    border-radius: 25px;
+    border: 1px solid rgb(53, 48, 151);
+}
+h1{
+    color: white;
+    font-size: 2.3rem;
+    max-width: 50%;
+    font-weight: 700;
+}
+.welcomeBack p{
+    color: rgb(109, 139, 176);
+    font-size: 1.2rem;
+    max-width: 70%;
+}
+.bgGlow{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 60%;
+    top: 150px;
+    transform: translateX(-70%);
+    background: radial-gradient(
+        circle,
+        rgba(103, 74, 255, .35) 0%,
+        rgba(103, 74, 255, .18) 35%,
+        transparent 90%
+    );
+    filter: blur(70px);
+    z-index: 0;
+    pointer-events: none;
+}
+.benefit{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.benefit li{
+    list-style: none;
+    color: rgb(196, 196, 224);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.benefit .greenPoint{
+    width: 18px;
+    height: 18px;
+    background-color: rgb(10, 65, 53);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+}
+.benefit .greenPoint::after{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: rgb(16, 185, 129);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgb(16, 185, 129);
+}
+.signInInput{
+    background-color: rgb(10, 10, 26);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+.elementsBox{
+    padding: 55px 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.logo .fa-lock{
+    color: white;
+    background-color: rgb(79, 70, 229);
+    padding: 0.7rem;
+    border-radius: 10px;
+}
+.logo h3{
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+}
+.mainText{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.mainText h2{
+    color: white;
+    font-size: 2rem;
+}
+.mainText p{
+    color: rgb(131, 139, 167);
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.emailInput{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.emailInput input{
+    padding: 15px 0 15px 20px;
+    width: 95%;
+    background-color: rgb(20, 20, 50);
+    border: 1px solid rgb(30, 30, 90);
+    border-radius: 13px;
+    color: rgb(156, 163, 175);
+    font-size: 16px;
+}
+.emailInput p{
+    color: rgb(196, 196, 224);
+}
+.masterPassword{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+.masterPassword p{
+    color: rgb(196, 196, 224);
+}
+.masterPassword input{
+    padding: 15px 0 15px 20px;
+    width: 95%;
+    background-color: rgb(20, 20, 50);
+    border: 1px solid rgb(30, 30, 90);
+    border-radius: 13px;
+    color: rgb(156, 163, 175);
+    font-size: 17px;
+}
+.fa-regular{
+    color: rgb(139, 139, 176);
+    position: absolute;
+    right: 20px;
+    top: 45px;
+    display: block;
+}
+.fa-eye-slash{
+    display: none;
+}
+.transferBox{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.transferDashBoard button{
+    width: 100%;
+    background-color: rgb(67, 56, 202);
+    padding: 12px 0;
+    border-radius: 8px;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    color: white;
+}
+.transferDashBoard:hover{
+    cursor: pointer;
+}
+.borderOr{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.borderOr span{
+    height: 5px;
+    width: 45%;
+    border-top: 2px solid rgb(30, 30, 90);
+}
+.borderOr p{
+    color: rgb(139, 139, 176);
+}
+.transferRegister{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+.transferRegister p{
+    color: rgb(139, 139, 143);
+}
+.transferRegister a{
+    color:rgb(61, 60, 203) ;
+    text-decoration: none;
+}
+@media screen and (max-width:768px){
+    .welcomeBack{
+        display: none;
+    }
+    .signInInput{
+        width: 100%;
+    }
+    .elementsBox{
+        width: 70%;
+        padding: 20px 15%;
+    }
+    .logo{
+        justify-content: center;
+    }
+}
+@media screen and (max-width:426px){
+    .elementsBox{
+        width: 90%;
+        padding: 20px 5%;
+    }
+}
+@media screen and (max-width:322px){
+    .transferRegister a{
+        font-size: 0.9rem;
+    }
+    .transferRegister p{
+        font-size: 0.9rem;
+    }
+}

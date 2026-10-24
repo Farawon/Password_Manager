@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section class="heroSection">
+            <div class="mainBoard">   
+                <div class="journeyBegin">
+                    <div class="bgGlow"></div>
+                    <i class="fa-solid fa-shield"></i>
+                    <h1>Your Security Journey Begins Now</h1>
+                    <p>Create your FortressPass account and start securing your digital life in minutes.</p>
+                    <ul class="benefit">
+                        <li><div class="numerical zero">01</div>
+                            <div class="textBox">
+                                <p>Create your account</p>
+                                <span>Enter your details and set a strong master password.</span>
+                            </div>
+                        </li>
+                        <li><div class="numerical">02</div>
+                            <div class="textBox">
+                                <p>Verify your email</p>
+                                <span>We'll send a one-time verification link.</span>
+                            </div>
+                        </li>
+                        <li><div class="numerical">03</div>
+                            <div class="textBox">
+                                <p>Access your vault</p>
+                                <span>Import or start adding your credentials.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="registerInput">
+                    <div class="elementsBox">
+                        <div class="logo">
+                            <i class="fa-solid fa-lock"></i>
+                            <h3>FortressPass</h3>
+                        </div>
+                        <div class="mainText">
+                            <h2>Create Account</h2>
+                            <p>Set up your encrypted password vault</p>
+                        </div>
+                        <form class="inputs" id="loginForm">
+                            <div class="nameInput">
+                                <p>Full Name</p>
+                                <input type="text" placeholder="John Doe" name="fullName">
+                            </div>
+                            <div class="emailInput">
+                                <p>Email Address</p>
+                                <input type="email" placeholder="you@example.com" id="emailInput" name="email">
+                            </div>
+                            <div class="masterPassword">
+                                    <p>Master Password</p>
+                                    <input type="password" placeholder="Create a strong master password" class="passwordInput" id="masterPasswordInput" name="masterpass">
+                                    <i class="fa-regular fa-eye"    ></i>
+                                    <i class="fa-regular fa-eye-slash"></i>
+                                    <div class="passwordCheck" id="passwordCheck">
+                                            <div class="strengthBar">
+                                                <span class="bar"></span>
+                                                <span class="bar"></span>
+                                                <span class="bar"></span>  
+                                            </div>
+                                        <div class="passwordInfo">
+                                            <span id="strength">Too Weak</span>
+                                            <span id="symbolsReqirements">7 more chars needed</span>
+                                        </div>
+                                        <ul class="reqirements">
+                                            <li><p id="length">8+ characters</p></li>
+                                            <li><p id="uppercase">Uppercase letter</p></li>
+                                            <li><p id="number">Number</p></li>
+                                            <li><p id="special">Special character</p></li>
+                                        </ul>
+                                    </div>
+                            </div>
+                            <div class="masterPassword">
+                                 <p>Confirm Master Password</p>
+                                    <input type="password" placeholder="Re-enter your master password" class="passwordInput" id="masterPasswordConfirm" name="masterpassconfirm">
+                                    <i class="fa-regular fa-eye" ></i>
+                                    <i class="fa-regular fa-eye-slash"></i>
+                            </div>
+                            <div class="transferBox">
+                                <div class="rememberMe">
+                                    <input type="checkbox" class="inputCheckBox" name="checkBox">
+                                    <p>I agree to the <span><a href="">Terms of service</a></span> and <span><a href="">Privacy Policy</a></span>.I understand FortressPass cannot recover my master password.</p>
+                                </div>
+                                <div class="transferDashBoard">
+                                   <button class="btnCreate" type="submit">
+                                     <i class="fa-solid fa-shield"></i>Create My Vault
+                                   </button>
+                                </div>
+                                <div class="transferRegister">
+                                    <p>Already have an account?</p>
+                                    <a href="login.html">Sign In</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="src/registerSend.js"></script>
+    <script type="module" src="src/emailCheck.js"></script>
+    <script type="module" src="src/getPasswordScore.js"></script>
+    <script type="module" src="src/passwordCheck.js"></script>
+    <script type ='module' src="src/eyePassword.js"></script>
+</body>
+</html>

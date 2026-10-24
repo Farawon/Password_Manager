@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="src/closeAside.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="inputBox">
+            <button class="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="logo">
+                <i class="fa-solid fa-lock logoBkg"></i>
+                <h3 class="logoText">FortressPass</h3>
+            </div>
+            <i class="fa-solid fa-chevron-left"></i>
+            <i class="fa-solid fa-chevron-right"></i>
+            <div class="inputSearch">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" placeholder="Search vault..." class="searchInputHeader">
+            </div>
+        </div>
+        <div class="headerButtons">
+            <button class="btnSync"><i class="fa-solid fa-arrows-rotate"></i> Sync</button>
+            <button class="btnAdd"><i class="fa-solid fa-plus"></i> Add Password</button>
+        </div>     
+    </header>
+        <div class="asideOverlay"></div>
+        <div class="mainSection">
+            <aside class="mainAside">
+                <div class="vaultSecured">
+                    <div class="dott"></div>
+                    <p class="vaultPassiveGreen">Vault Secured & Synced</p>
+                </div>
+                <h3 class="vaultText">VAULT</h3>
+                <ul class="selectionGroup">
+                    <li class="selectType"><i class="fa-solid fa-table-columns"></i> <p class="textDescription">All Items</p></li>
+                    <li class="selectType"><i class="fa-solid fa-users"></i> <p class="textDescription">Social</p></li>
+                    <li class="selectType"><i class="fa-regular fa-credit-card"></i> <p class="textDescription">Finance</p></li>
+                    <li class="selectType"><i class="fa-solid fa-shield"></i> <p class="textDescription">Work</p></li>
+                    <li class="selectType"><i class="fa-solid fa-shield"></i> <p class="textDescription">Shopping</p></li>
+                    <li class="selectType"><i class="fa-regular fa-star"></i> <p class="textDescription">Entertainment</p></li>
+                    <li class="selectType"><i class="fa-regular fa-file"></i> <p class="textDescription">Other</p></li>
+                </ul>
+                <div class="asideDown">
+                    <div class="profileSettings">
+                        <li class="selectType gear"><i class="fa-solid fa-gear"></i><p class="textDescription">Settings</p></li>
+                        <li class="selectType signOut"><i class="fa-solid fa-arrow-right-from-bracket"></i><p class="textDescription">Sign Out</p></li>
+                    </div>
+                    <div class="profileCard">
+                        <i class="fa-solid fa-user"></i>
+                        <div class="profileInfo">
+                            <p class="profileName">Alex Morgan</p>
+                            <span class="profilePlan">Pro Plan</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </aside>
+            <main>
+                <section class="analytikMetrics">
+                    <div class="analytikMetricsType">
+                        <i class="fa-solid fa-key"></i>
+                        <div class="numericAnalytik">
+                            <p class="totalPassword">0</p>
+                            <span>Total Passwords</span>
+                        </div>
+                    </div>
+                    <div class="analytikMetricsType">
+                        <i class="fa-solid fa-shield"></i>
+                        <div class="numericAnalytik">
+                            <p class="strongPasswordAmount">0</p>
+                            <span>Strong Passwords</span>
+                        </div>
+                    </div>
+                    <div class="analytikMetricsType">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <div class="numericAnalytik">
+                            <p class="weakPasswordAmount">0</p>
+                            <span>Weak Passwords</span>
+                        </div>
+                    </div>
+                </section>
+                <section class="passwordListSection">
+                    <h2>All Passwords</h2>
+                    <p class="amountPasswords">0 entries</p>
+                    <div class="containerTasks">
+                        <div class="passwordTable">
+                            <div class="passwordHeader">
+                                <span>SITE</span>
+                                <span>USERNAME/EMAIL</span>
+                                <span>PASSWORD</span>
+                                <span>STRENGTH</span>
+                                <span>UPDATED</span>
+                            </div>
+                            <div class="containerPass">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div class="modalBackground"></div>
+        <div class="modalWindow">
+            <div class="modalInformation">
+                <div class="addCredential">
+                    <h3>Add New Credential</h3>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="inputGroup">
+                    <p>SITE NAME *</p>
+                    <input type="text" name="siteName" id="siteNameInput" placeholder="e.g GitHub">
+                </div>
+                <div class="inputGroup">
+                    <p>WEBSITE URL</p>
+                    <input type="text" name="url" id="urlInput" placeholder="https://github.com">
+                </div>
+                <div class="inputGroup">
+                    <p>EMAIL *</p>
+                    <input type="text" name="email" id="userEmailInput" placeholder="Email">
+                </div>
+                <div class="passwordGenerate">
+                    <div class="inputGroup inputPassword">
+                        <p>PASSWORD *</p>
+                        <input type="password" name="password" placeholder="Enter or generate a password" class="passwordInput" id="passInputModal">
+                        <div class="icons">
+                            <i class="fa-regular fa-copy"></i>
+                            <div class="eyesPass">
+                                <i class="fa-regular fa-eye eye"></i>
+                                <i class="fa-regular fa-eye-slash eye"></i>
+                            </div>
+                        </div>
+                        <div class="strengthInfo">
+                              <div class="bars">
+                                <span class="barStrength"></span>
+                                <span class="barStrength"></span>
+                                <span class="barStrength"></span>
+                            </div>
+                            <div class="chars">
+                                <p class="describeStrength">Weak</p>
+                                <span class="charsLength">1 chars</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="generator">
+                        <div class="quantityChars">
+                            <p>Generate Password</p>
+                            <span class="amountChars">8 chars</span>
+                        </div>
+                        <input type="range" name="range" id="lengthSlider" min="8" max="32" value="8">
+                        <button class="btnGenerate">
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                            Generate Secure Password
+                        </button>
+                    </div>
+                    <div class="category">
+                        <p>CATEGORY</p>
+                        <select id="categorySelect" name="categoryPass">
+                            <option value="OTHER">OTHER</option>
+                            <option value="SOCIAL">SOCIAL</option>
+                            <option value="FINANCE">FINANCE</option>
+                            <option value="WORK">WORK</option>
+                            <option value="SHOPPING">SHOPPING</option>
+                            <option value="ENTERTAINMENT">ENTERTAINMENT</option>
+                        </select>
+                    </div>
+                    <div class="AddVault">
+                        <button class="cancelBtn">
+                            Cancel
+                        </button>
+                        <button class="BtnaddVault">
+                            Add to Vault
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="settingsBkg"></div>
+        <div class="modalSettings">
+            <div class="settingsBody">
+                <aside class="settingsAside">
+                    <h3>SETTINGS</h3>
+                    <div class="navigation">
+                        <button class="navBtn profile">Profile</button>
+                        <button class="navBtn billing">Billing</button>
+                    </div>
+                </aside>
+                <div class="mainInformation">
+                    <i class="fa-solid fa-xmark settingsCloseIcon"></i>
+                    <div class="modalContent modalActive profileSection">
+                        <h2>Profile Details</h2>
+                        <p class="modalMainText">Manage your account identity</p>
+                        <div class="settingsField">
+                            <p>FULL NAME</p>
+                            <input type="text" class="profileFullName" readonly>
+                        </div>
+                        <div class="settingsField">
+                            <p>EMAIL ADDRESS</p>
+                            <input type="email" class="profileEmail" readonly>
+                        </div>
+                    </div>
+                    <div class="modalContent billingSection">
+                        <h2>Billing Payments</h2>
+                        <p class="modalMainText">
+                            Manage your subscription and billing information
+                        </p>
+                        <span class="modalSubtitleText">
+                            Select Subscription Plan
+                        </span>
+                            <div class="planSection">
+                                    <label class="plan proPlan">
+                                       <div class="boxPlan">
+                                            <input type="radio" name="plan" value="PRO" checked style="display: none;">
+                                            PRO<br><span class="pricePlan">$9 / month </span><br>
+                                            <span class="secondsubtitleText">Advanced features</span>
+                                       </div>
+                                    </label>
+                                    <label class="plan">
+                                        <div class="boxPlan">
+                                            <input type="radio" name="plan" value="BUSINESS" style="display: none;" >
+                                            BUSINESS<br><span class="pricePlan">$29 / month </span><br>
+                                            <span class="secondsubtitleText">Team managment</span>
+                                        </div>
+                                    </label>
+                            </div>
+                        <h3 class="paymentMethod">Select Payment Method</h3>
+                        <div id="cards">
+                            Loading cards...
+                        </div>
+                        <div class="btnCards">
+                        <button type="button" id="add-card-button">
+                           + Add new payment method
+                        </button>
+                        <div id="new-card" style="display: none;">
+                            <div id="card-element"></div>
+                        </div>
+                        <br>
+                        <button type="button" id="pay-button">
+                            Subscribe
+                        </button>
+                        </div>
+                        <div id="error"></div>
+                        <div id="success"></div>
+                    </div>
+                    <div class="settingsDown">
+                        <div class="settingsFooter">
+                            <button class="settingsCloseBtn">Close</button>
+                            <button class="settingsApply">Apply changes</button>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+    </div>
+</div>
+        </div>
+        <script type="module" src="src/asideAnimation.js"></script>
+        <script type="module" src="src/passwordCheckModal.js"></script>
+        <script type="module" src="src/settingsModal.js"></script>
+        <script type="module" src="src/modalWindow.js"></script>
+        <script type="module" src="src/getPasswordScore.js"></script>
+        <script type="module" src="src/eyeModal.js"></script>
+        <script type="module" src="src/copyModal.js"></script>
+        <script type="module" src="src/passGenerate.js"></script>
+        <script type="module" src="src/addPassword.js"></script>
+        <!-- <script src="https://js.stripe.com/v3/"></script> -->
+        <!-- <script type="module" src="src/js.js"></script> -->
+         <script type="module" src="src/profile.js"></script>
+</body>
+</html>
